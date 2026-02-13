@@ -87,7 +87,7 @@ Modify CSS variables in `css/style.css`:
 }
 ```
 
-## 🎁 Easter Eggs
+## Easter Eggs
 
 - **Press `Ctrl/Cmd + K`** for a special surprise!
 - **Check the browser console** for hidden messages
