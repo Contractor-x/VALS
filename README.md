@@ -112,7 +112,7 @@ Works on all modern browsers:
 
 Developed for the best Frontend Developer in the world!
 
-## 📝 License
+## License
 
 This is a personal Valentine's Day gift. Feel free to use it as inspiration for your own romantic projects! 💕
 
