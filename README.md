@@ -108,7 +108,7 @@ Works on all modern browsers:
 - Safari
 - Mobile browsers
 
-## 💝 Credits
+## Credits
 
 Made with ❤️ for the best frontend developer in the world!
 
