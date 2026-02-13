@@ -110,7 +110,7 @@ Works on all modern browsers:
 
 ## Credits
 
-Made with ❤️ for the best frontend developer in the world!
+Developed for the best Frontend Developer in the world!
 
 ## 📝 License
 
