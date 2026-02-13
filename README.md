@@ -19,7 +19,6 @@ A beautiful, interactive Valentine's Day webpage featuring floating hearts, roma
 
 1. Clone or download this repository
 2. Open `index.html` in your browser
-3. That's it! No build process needed.
 
 ### Deploy to Vercel
 
