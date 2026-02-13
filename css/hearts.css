@@ -1,0 +1,213 @@
+.hearts-container {
+    position: relative;
+    min-height: 500px;
+    margin: 2rem 0;
+}
+
+.heart {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.5));
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.heart:hover {
+    transform: scale(1.3) rotate(10deg);
+    filter: drop-shadow(0 0 20px rgba(255, 107, 157, 0.8));
+}
+
+.heart.clicked {
+    animation: heartPop 0.6s ease-out;
+}
+
+@keyframes heartPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5) rotate(15deg);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Heart SVG */
+.heart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.heart-shape {
+    fill: var(--primary-pink);
+    transition: fill 0.3s ease;
+}
+
+.heart:hover .heart-shape {
+    fill: var(--secondary-purple);
+}
+
+/* Floating animations */
+@keyframes floatHeart1 {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-30px) translateX(15px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-30px) translateX(-15px) rotate(-5deg);
+    }
+}
+
+@keyframes floatHeart2 {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-40px) translateX(-20px) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-60px) translateX(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-40px) translateX(20px) rotate(5deg);
+    }
+}
+
+@keyframes floatHeart3 {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-35px) translateX(10px) rotate(3deg);
+    }
+    66% {
+        transform: translateY(-55px) translateX(-10px) rotate(-3deg);
+    }
+}
+
+.heart.float-1 {
+    animation: floatHeart1 6s ease-in-out infinite;
+}
+
+.heart.float-2 {
+    animation: floatHeart2 7s ease-in-out infinite;
+}
+
+.heart.float-3 {
+    animation: floatHeart3 8s ease-in-out infinite;
+}
+
+/* Message Tooltip */
+.heart-message {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background: linear-gradient(135deg, var(--primary-pink), var(--secondary-purple));
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+}
+
+.heart-message::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: var(--secondary-purple);
+}
+
+.heart:hover .heart-message {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* Different heart sizes */
+.heart.size-small {
+    width: 45px;
+    height: 45px;
+}
+
+.heart.size-medium {
+    width: 60px;
+    height: 60px;
+}
+
+.heart.size-large {
+    width: 75px;
+    height: 75px;
+}
+
+/* Sparkle effect on hover */
+.heart::before {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.heart:hover::before {
+    opacity: 1;
+    animation: sparkle 1s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 0.7;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hearts-container {
+        min-height: 400px;
+    }
+
+    .heart {
+        width: 50px;
+        height: 50px;
+    }
+
+    .heart.size-small {
+        width: 40px;
+        height: 40px;
+    }
+
+    .heart.size-large {
+        width: 65px;
+        height: 65px;
+    }
+
+    .heart-message {
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+}
