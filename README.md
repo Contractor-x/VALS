@@ -13,7 +13,7 @@ A beautiful, interactive Valentine's Day webpage featuring floating hearts, roma
 - **Responsive Design** - Works beautifully on mobile, tablet, and desktop
 - **Easter Eggs** - Secret keyboard shortcuts and console messages
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Local Development
 
