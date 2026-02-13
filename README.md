@@ -93,7 +93,7 @@ Modify CSS variables in `css/style.css`:
 - **Check the browser console** for hidden messages
 - **Click the mysterious 4th meme** for a classic surprise
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Pure HTML5
 - CSS3 (Animations, Grid, Flexbox)
