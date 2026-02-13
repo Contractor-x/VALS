@@ -91,7 +91,7 @@ Modify CSS variables in `css/style.css`:
 
 - **Press `Ctrl/Cmd + K`** for a special surprise!
 - **Check the browser console** for hidden messages
-- **Click the mysterious 4th meme** for a classic surprise 😉
+- **Click the mysterious 4th meme** for a classic surprise
 
 ## 🛠️ Technologies Used
 
