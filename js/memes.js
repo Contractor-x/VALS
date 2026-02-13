@@ -1,22 +1,24 @@
 // Meme modal functionality
 const memes = {
     1: {
-        type: 'text',
-        content: '😍',
-        text: 'Literally me every time I see you',
-        emoji: '😍'
+        type: 'image',
+        content: 'assets/images/memes/I Love You Kiss GIF.gif',
+        text: 'Funny how we both have this sticker!'
     },
     2: {
-        type: 'text',
-        content: '🤝',
-        text: 'Us: Pair programming through life\'s bugs',
-        emoji: '🤝'
+        type: 'image',
+        content: 'assets/images/memes/Love You Cat GIF.gif',
+        text: 'A perfect pair, like Git and GitHub'
     },
     3: {
-        type: 'text',
-        content: '💪',
-        text: 'Our relationship: No merge conflicts, only feature branches',
-        emoji: '💪'
+        type: 'image',
+        content: 'assets/images/memes/Suspicious Monkey GIF by MOODMAN.gif',
+        text: 'Our relationship? sometimes a little suspicious, but always full of love and a lack of VNs!'
+    },
+    4: {
+        type: 'image',
+        content: 'assets/images/memes/Happy Work GIF by Alliance.gif',
+        text: 'How it feels knowing you have the absolute Dev of a boo?'
     },
     rickroll: {
         type: 'video',
@@ -50,6 +52,11 @@ function openMeme(memeId) {
         setTimeout(() => {
             showNotification('Gotcha! Never gonna give you up! 🎵');
         }, 500);
+    } else if (meme.type === 'image') {
+        memeDisplay.innerHTML = `
+            <img src="${meme.content}" alt="${meme.text}" class="meme-preview">
+            <div class="meme-text">${meme.text}</div>
+        `;
     } else if (meme.type === 'text') {
         // Text-based meme
         memeDisplay.innerHTML = `

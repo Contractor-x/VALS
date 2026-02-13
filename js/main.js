@@ -74,14 +74,15 @@ commitItems.forEach((item, index) => {
 // Console Easter egg
 console.log('%c💖 Happy Valentine\'s Day, Joanna! 💖', 
     'font-size: 24px; font-weight: bold; color: #ff6b9d; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);');
-console.log('%cYou\'re the best thing that ever happened to my code... and my life! 💕', 
+console.log('%cYou\'re the best thing that ever happened to my code... and my life! ', 
     'font-size: 16px; color: #4facfe;');
-console.log('%cP.S. Check out the hearts and don\'t forget the Rick Roll! 😏', 
+console.log('%cP.S. Check out the hearts 😏', 
     'font-size: 14px; color: #c44569; font-style: italic;');
 
 // Add a special keyboard shortcut (Ctrl/Cmd + K for extra love)
 document.addEventListener('keydown', function(e) {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    const key = e.key.toLowerCase();
+    if ((e.ctrlKey || e.metaKey) && key === 'k') {
         e.preventDefault();
         showNotification('Secret shortcut activated! I love you even more! 💕💕💕');
         
@@ -142,5 +143,5 @@ window.addEventListener('load', function() {
     }, 100);
 });
 
-console.log('%c🚀 All systems loaded! Time to spread the love!', 
+console.log('%c All systems loaded! Make i go make EBA!', 
     'font-size: 14px; color: #00f2fe; font-weight: bold;');

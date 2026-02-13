@@ -1,14 +1,14 @@
 :root {
-    --bg-dark: #0a0e27;
-    --bg-gradient-start: #1a1a2e;
-    --bg-gradient-end: #16213e;
+    --bg-dark: #03071f;
+    --bg-gradient-start: #020518;
+    --bg-gradient-end: #081a40;
     --primary-pink: #ff6b9d;
     --secondary-purple: #c44569;
-    --accent-blue: #4facfe;
+    --accent-blue: #6db9ff;
     --text-light: #f8f9fa;
-    --text-muted: #a8b2d1;
+    --text-muted: #c5d2ea;
     --glow-pink: rgba(255, 107, 157, 0.6);
-    --glow-blue: rgba(79, 172, 254, 0.4);
+    --glow-blue: rgba(109, 185, 255, 0.5);
 }
 
 * {
@@ -26,6 +26,65 @@ body {
     position: relative;
 }
 
+.background-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(3, 9, 30, 0.7), rgba(8, 26, 60, 0.75));
+    z-index: -5;
+    pointer-events: none;
+}
+
+.background-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -10;
+    pointer-events: none;
+}
+
+/* Decorative corner GIFs */
+.corner-gif {
+    position: absolute;
+    top: 0.75rem;
+    width: clamp(5rem, 12vw, 10rem);
+    z-index: 0;
+    pointer-events: none;
+    animation: pulseCorner 8s ease-in-out infinite;
+    --corner-rotate: rotate(0deg);
+    transform: var(--corner-rotate);
+}
+
+.corner-gif img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    box-shadow: 0 15px 45px rgba(10, 14, 39, 0.6);
+}
+
+.corner-gif--left {
+    left: 0.75rem;
+    --corner-rotate: rotate(-12deg);
+}
+
+.corner-gif--right {
+    right: 0.75rem;
+    --corner-rotate: rotate(12deg);
+}
+
+@keyframes pulseCorner {
+    0%,
+    100% {
+        transform: var(--corner-rotate) translateY(0);
+    }
+    50% {
+        transform: var(--corner-rotate) translateY(-6px);
+    }
+}
+
 /* Floating Name Background */
 .name-background {
     position: fixed;
@@ -35,12 +94,13 @@ body {
     font-size: clamp(8rem, 20vw, 18rem);
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.12);
     z-index: 0;
     pointer-events: none;
     animation: floatName 20s ease-in-out infinite;
     letter-spacing: 0.1em;
     user-select: none;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 @keyframes floatName {
@@ -63,30 +123,19 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 0;
+    opacity: 0.1;
 }
 
 .stars {
-    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="2" height="2"><circle cx="1" cy="1" r="1" fill="white" opacity="0.3"/></svg>') repeat;
-    animation: starsMove 100s linear infinite;
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="2" height="2"><circle cx="1" cy="1" r="1" fill="white" opacity="0.25"/></svg>') repeat;
 }
 
 .stars2 {
-    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3"><circle cx="1.5" cy="1.5" r="1" fill="white" opacity="0.2"/></svg>') repeat;
-    animation: starsMove 150s linear infinite;
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3"><circle cx="1.5" cy="1.5" r="1" fill="white" opacity="0.18"/></svg>') repeat;
 }
 
 .stars3 {
-    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><circle cx="2" cy="2" r="1.5" fill="white" opacity="0.1"/></svg>') repeat;
-    animation: starsMove 200s linear infinite;
-}
-
-@keyframes starsMove {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100vh);
-    }
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><circle cx="2" cy="2" r="1.5" fill="white" opacity="0.12"/></svg>') repeat;
 }
 
 /* Container */
