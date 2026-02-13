@@ -100,7 +100,7 @@ Modify CSS variables in `css/style.css`:
 - Vanilla JavaScript (No frameworks!)
 - Google Fonts (Playfair Display, Space Mono, Poppins)
 
-## 📱 Browser Support
+## Browser Support
 
 Works on all modern browsers:
 - Chrome/Edge (recommended)
