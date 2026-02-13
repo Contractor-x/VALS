@@ -2,7 +2,7 @@
 
 A beautiful, interactive Valentine's Day webpage featuring floating hearts, romantic commit history, memes, and a space-themed design with Dev~Bytes name floating in the background.
 
-## ✨ Features
+## Features
 
 - **Floating Hearts** - Interactive hearts that float around with sweet messages on hover
 - **Click Notifications** - Collect love notes by clicking hearts with sound notifications
