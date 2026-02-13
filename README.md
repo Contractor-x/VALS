@@ -20,15 +20,6 @@ A beautiful, interactive Valentine's Day webpage featuring floating hearts, roma
 1. Clone or download this repository
 2. Open `index.html` in your browser
 
-### Deploy to Vercel
-
-1. Push this code to a GitHub repository
-2. Go to [Vercel](https://vercel.com)
-3. Click "New Project"
-4. Import your GitHub repository
-5. Click "Deploy"
-6. Your site will be live in seconds!
-
 ### Deploy to GitHub Pages
 
 1. Push this code to a GitHub repository
