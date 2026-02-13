@@ -1,5 +1,22 @@
 // Main initialization and additional features
 
+// Background music unlock (autoplay blockers require a gesture)
+const backgroundMusic = document.getElementById('background-music');
+function unlockBackgroundMusic() {
+    if (!backgroundMusic) return;
+    backgroundMusic.volume = 0.35;
+    const playPromise = backgroundMusic.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {
+            console.info('Waiting for user interaction to start the background music.');
+        });
+    }
+    document.removeEventListener('pointerdown', unlockBackgroundMusic);
+    document.removeEventListener('keydown', unlockBackgroundMusic);
+}
+document.addEventListener('pointerdown', unlockBackgroundMusic, { once: true });
+document.addEventListener('keydown', unlockBackgroundMusic, { once: true });
+
 // Smooth scroll for any internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -141,6 +158,7 @@ window.addEventListener('load', function() {
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = '1';
     }, 100);
+    unlockBackgroundMusic();
 });
 
 console.log('%c All systems loaded! Make i go make EBA!', 
