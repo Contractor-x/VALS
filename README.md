@@ -114,7 +114,7 @@ Developed for the best Frontend Developer in the world!
 
 ## License
 
-This is a personal Valentine's Day gift. Feel free to use it as inspiration for your own romantic projects! 💕
+This is a personal Valentine's Day gift. Feel free to use it as inspiration for your own romantic projects! 
 
 ---
 
