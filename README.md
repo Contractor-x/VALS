@@ -27,7 +27,7 @@ A beautiful, interactive Valentine's Day webpage featuring floating hearts, roma
 3. Select "Deploy from main branch"
 4. Your site will be live at `https://yourusername.github.io/repository-name`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 valentine-joanna/
@@ -45,7 +45,7 @@ valentine-joanna/
 └── README.md           # This file
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Change Messages
 Edit the `heartMessages` array in `js/hearts.js` to customize the love notes:
