@@ -7,7 +7,7 @@ A beautiful, interactive Valentine's Day webpage featuring floating hearts, roma
 - **Floating Hearts** - Interactive hearts that float around with sweet messages on hover
 - **Click Notifications** - Collect love notes by clicking hearts with sound notifications
 - **Git Commit Timeline** - A romantic timeline of your love story in git commit format
-- **Meme Gallery** - Fun relationship memes with a Rick Roll Easter egg 😏
+- **Meme Gallery** - Fun relationship memes with a Rick Roll Easter egg 
 - **Space Theme** - Beautiful starry background with Joanna's name floating majestically
 - **Smooth Animations** - CSS animations and transitions throughout
 - **Responsive Design** - Works beautifully on mobile, tablet, and desktop
