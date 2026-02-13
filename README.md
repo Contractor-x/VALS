@@ -1,4 +1,4 @@
-# 💖 Valentine's Day Web Page for Joanna
+# Valentine's Day Web Page for Dev~Bytes
 
 A beautiful, interactive Valentine's Day webpage featuring floating hearts, romantic commit history, memes, and a space-themed design with Joanna's name floating in the background.
 
